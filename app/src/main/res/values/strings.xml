@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">AndroidSTT</string>
+    <string name="record">Start STT</string>
+    <string name="stop_record">Stop STT</string>
+</resources>
