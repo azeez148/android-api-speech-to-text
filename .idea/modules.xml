@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/AndroidSTT.iml" filepath="$PROJECT_DIR$/AndroidSTT.iml" />
+      <module fileurl="file://$PROJECT_DIR$/android-api-speech-to-text.iml" filepath="$PROJECT_DIR$/android-api-speech-to-text.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>

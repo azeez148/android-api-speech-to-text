@@ -1,5 +1,7 @@
 package com.santiago.androidstt.STT;
 
+import android.support.annotation.NonNull;
+
 /**
  * Created by santiago on 27/03/16.
  */
@@ -11,11 +13,11 @@ public enum SimpleLanguage {
 
     private String code;
 
-    SimpleLanguage(String code) {
+    SimpleLanguage(@NonNull String code) {
         this.code = code;
     }
 
-    public String getCode() {
+    public @NonNull String getCode() {
         return code;
     }
 

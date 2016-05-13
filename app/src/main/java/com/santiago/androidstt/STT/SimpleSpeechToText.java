@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.speech.RecognitionListener;
 import android.speech.RecognizerIntent;
 import android.speech.SpeechRecognizer;
+import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 
 import java.util.ArrayList;
@@ -17,18 +18,18 @@ import java.util.List;
  */
 public class SimpleSpeechToText {
 
-    private SimpleLanguage language = SimpleLanguage.AUTO;
+    private @NonNull SimpleLanguage language = SimpleLanguage.AUTO;
 
-    private SimpleSpeechToTextListener listener = null;
+    private @Nullable SimpleSpeechToTextListener listener = null;
 
     private SpeechRecognizer speechRecognizer = null;
 
-    public SimpleSpeechToText(Context context) {
+    public SimpleSpeechToText(@NonNull Context context) {
         speechRecognizer = SpeechRecognizer.createSpeechRecognizer(context);
         speechRecognizer.setRecognitionListener(speechRecognizerListener);
     }
 
-    public void setListener(SimpleSpeechToTextListener listener) {
+    public void setListener(@Nullable SimpleSpeechToTextListener listener) {
         this.listener = listener;
     }
 
@@ -36,7 +37,7 @@ public class SimpleSpeechToText {
         speechRecognizer.stopListening();
     }
 
-    public void setLanguage(SimpleLanguage language) {
+    public void setLanguage(@NonNull SimpleLanguage language) {
         this.language = language;
     }
 
@@ -119,8 +120,8 @@ public class SimpleSpeechToText {
 
     public interface SimpleSpeechToTextListener {
         void onError(int error);
-        void onResults(@Nullable String bestResult, List<String> results);
-        void onPartialResults(String partialResult);
+        void onResults(@Nullable String bestResult, @NonNull List<String> results);
+        void onPartialResults(@NonNull String partialResult);
     }
 
 

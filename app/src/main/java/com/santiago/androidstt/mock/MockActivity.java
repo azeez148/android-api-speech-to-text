@@ -2,6 +2,7 @@ package com.santiago.androidstt.mock;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.view.View;
 import android.widget.TextView;
@@ -67,7 +68,7 @@ public class MockActivity extends Activity implements SimpleSpeechToText.SimpleS
     }
 
     @Override
-    public void onResults(@Nullable String bestResult, List<String> results) {
+    public void onResults(@Nullable String bestResult, @NonNull List<String> results) {
         text.setText(bestResult);
 
         recording = false;
@@ -75,7 +76,7 @@ public class MockActivity extends Activity implements SimpleSpeechToText.SimpleS
     }
 
     @Override
-    public void onPartialResults(String partialResult) {
+    public void onPartialResults(@NonNull String partialResult) {
         text.setText(partialResult);
     }
 }
